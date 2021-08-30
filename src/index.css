@@ -1,3 +1,18 @@
+:root {
+}
+
+.light-theme {
+  --primary-color: #4B6587;
+  --background-color: #F7F6F2;
+  --font-color: #4B6587;
+}
+
+.dark-theme {
+  --primary-color: #BD4B4B;
+  --background-color: #2B2B2B;
+  --font-color: #BD4B4B;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +20,142 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 80vh;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+
+}
+
+a {
+  color: var(--font-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* header container */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  margin: auto 20px;
+}
+
+.nav-container {
+  display: flex;
+  margin: auto 8%;
+}
+
+.theme-switch-container {
+  margin: auto;
+}
+
+.nav-container ul {
+  display: flex;
+}
+
+.nav-container ul li {
+  margin: auto 20px;
+  list-style: none;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+}
+
+
+/* Toggle Switch Start */
+.toggle-input {
+  position: absolute;
+  top: 25px;
+  left: 94%;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 25px;
+  left: 94%;
+}
+
+.toggle-input {
+  opacity: 0;
+}
+
+.toggle-input:checked + .toggle-label::before {
+  display: inline-block;
+  content: " ";
+  background-image: url(./images/moon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 3px black;
+  width: 35px;
+  height: 35px;
+  background-color: #cf5656; 
+  transform: rotate(0deg);
+  transition: all 2s;
+}
+
+.toggle-input + .toggle-label::before {
+  display: inline-block;
+  content: " ";
+  background-image: url(./images/sun.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 3px black;
+  width: 35px;
+  height: 35px;
+  background-color: #74babb;
+  transform: rotate(90deg);
+  transition: all 2s;
+  
+  
+}
+
+.toggle-label:hover {
+  cursor: pointer;
+}
+
+
+/* Responsive CSS width under 880px */
+@media only screen and (max-width: 880px) {
+  header {
+    flex-wrap: wrap;
+  }
+  /* Heading Style */
+  h2 {
+      font-size: var(--big-size);
+      text-align: center;
+  }
+
+  .toggle-input:checked + .toggle-label::before {
+      background-color: #1f2833;   
+  }
+
+  .toggle-input + .toggle-label::before {
+      background-color: #EDEDF6;   
+  } 
+
+}
+
+/* Responsive Style width below 540px */
+@media only screen and (max-width: 540px) {
+  /* Toggle Style */
+  .toggle-input {
+      left : 85%;
+  }
+
+  .toggle-label {
+      left : 85%;
+  }
+}
+
+
