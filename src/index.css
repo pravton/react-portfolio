@@ -1,23 +1,28 @@
 :root {
+  --primary-font: 'Rubik', sans-serif;
+  --secondary-font:  'Poppins', sans-serif; 
 }
 
 .light-theme {
   --primary-color: #4B6587;
   --background-color: #F7F6F2;
   --font-color: #4B6587;
+  --dm-accent-color: #BD4B4B;
 }
 
 .dark-theme {
   --primary-color: #BD4B4B;
   --background-color: #2B2B2B;
   --font-color: #BD4B4B;
+  --dm-accent-color: #4B6587;
 }
+
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 80vh;
@@ -26,8 +31,20 @@ body {
 
 }
 
-a {
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--primary-font);
+  color: var(--font-color-secondary);
+}
+
+p {
+  font-family: var(--secondary-font);
   color: var(--font-color);
+}
+
+a {
+  font-family: var(--primary-font);
+  color: var(--font-color);
+  text-decoration: none;
 }
 
 code {
@@ -47,8 +64,19 @@ header {
 }
 
 .nav-container {
-  display: flex;
-  margin: auto 8%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10%;
+}
+
+.mobile-nav-icon {
+  position: absolute;
+  right: 35px;
+  top: 30px;
+}
+
+#burgerBtn {
+  display: none;
 }
 
 .theme-switch-container {
@@ -73,13 +101,13 @@ header {
 .toggle-input {
   position: absolute;
   top: 25px;
-  left: 94%;
+  right: 5%;
 }
 
 .toggle-label {
   position: absolute;
   top: 25px;
-  left: 94%;
+  right: 5%;
 }
 
 .toggle-input {
@@ -97,7 +125,7 @@ header {
   box-shadow: 0 0 3px black;
   width: 35px;
   height: 35px;
-  background-color: #cf5656; 
+  background-color: #1f2833;   
   transform: rotate(0deg);
   transition: all 2s;
 }
@@ -113,7 +141,7 @@ header {
   box-shadow: 0 0 3px black;
   width: 35px;
   height: 35px;
-  background-color: #74babb;
+  background-color: #EDEDF6;   
   transform: rotate(90deg);
   transition: all 2s;
   
@@ -130,6 +158,7 @@ header {
   header {
     flex-wrap: wrap;
   }
+
   /* Heading Style */
   h2 {
       font-size: var(--big-size);
@@ -147,15 +176,131 @@ header {
 }
 
 /* Responsive Style width below 540px */
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 690px) {
+
+  .mobile-nav-icon {
+    display: block;
+  }
+  
+  .nav-container {
+    width: 100%;
+    margin: auto;
+    align-items: start;
+    background-color: var(--primary-color);
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .nav-hide .nav {
+    margin: 0;
+  }
+
+  .nav-hide .nav li {
+    width: 100%;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  .nav-hide .nav li a {
+    display: none;
+  }
+
+  .nav-show .nav li {
+    width: 100%;
+    padding: 25px;
+    transition: all 0.5s ease-in;
+    height: 100%;
+  }
+
+  .nav-item a {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--background-color);
+  }
+
   /* Toggle Style */
   .toggle-input {
-      left : 85%;
+    right: 12%;
   }
 
   .toggle-label {
-      left : 85%;
+    right: 12%;
   }
+
+  #burgerBtn {
+    display: block;
+    border-top: 3px solid var(--primary-color);
+    height: 25px;
+    width: 25px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 30;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -khtml-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  #burgerBtn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    left: 0;
+    background: var(--primary-color);
+    top: 8px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -khtml-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  #burgerBtn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    left: 0;
+    background: var(--primary-color);
+    bottom: 0;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -khtml-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  
+  .nav-open #burgerBtn {
+    border-color: transparent;
+  }
+  .nav-open #burgerBtn:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -khtml-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 33px;
+    left: -2px;
+  }
+  .nav-open #burgerBtn:after {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -khtml-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    bottom: 11px;
+    width: 33px;
+    left: -2px;
+  }
+  
 }
 
 
