@@ -169,8 +169,6 @@ header {
   background-color: #EDEDF6;   
   transform: rotate(90deg);
   transition: all 2s;
-  
-  
 }
 
 .toggle-label:hover {
@@ -258,6 +256,15 @@ header {
     flex-wrap: wrap;
   }
 
+  .nav-container {
+    margin-left: 0;
+  }
+
+  .nav-item a {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
   /* Heading Style */
   h2 {
       font-size: var(--big-size);
@@ -275,7 +282,7 @@ header {
 }
 
 /* Responsive Style width below 540px */
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 780px) {
 
   .about-section img {
     max-width: 250px;
@@ -327,13 +334,25 @@ header {
     color: var(--background-color);
   }
 
+  .toggle-input:checked + .toggle-label::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .toggle-input + .toggle-label::before {
+    width: 32px;
+    height: 32px;
+  }
+
   /* Toggle Style */
   .toggle-input {
-    right: 12%;
+    right: 55px;
+    top: 27px;
   }
 
   .toggle-label {
-    right: 12%;
+    right: 55px;
+    top: 27px;
   }
 
   #burgerBtn {
@@ -345,6 +364,7 @@ header {
     position: absolute;
     z-index: 30;
     cursor: pointer;
+    left: -5px;
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -khtml-transition: all 0.3s ease-in;
@@ -403,6 +423,13 @@ header {
     bottom: 11px;
     width: 33px;
     left: -2px;
+  }
+  .contact-icons a {
+    min-width: 50px;
+  }
+
+  .contact-icons a i {
+    font-size: 30px;
   }
   
 }
