@@ -3,18 +3,22 @@
   --secondary-font:  'Poppins', sans-serif; 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .light-theme {
   --primary-color: #4B6587;
   --background-color: #F7F6F2;
   --font-color: #4B6587;
-  --dm-accent-color: #BD4B4B;
+  --dm-accent-color: #CF455C;
 }
 
 .dark-theme {
-  --primary-color: #BD4B4B;
-  --background-color: #2B2B2B;
-  --font-color: #BD4B4B;
-  --dm-accent-color: #4B6587;
+  --primary-color: #D7D8DA;
+  --background-color: #1c1f26;
+  --font-color: #D7D8DA;
+  --dm-accent-color: #CF455C;
 }
 
 
@@ -28,23 +32,35 @@ body {
   min-height: 80vh;
   background-color: var(--background-color);
   color: var(--primary-color);
-
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: var(--primary-font);
-  color: var(--font-color-secondary);
+  color: var(--primary-color);
 }
 
 p {
   font-family: var(--secondary-font);
   color: var(--font-color);
+  font-size: 20px;
 }
 
 a {
   font-family: var(--primary-font);
-  color: var(--font-color);
+  color: var(--primary-color);
   text-decoration: none;
+  /* border-radius: 40%; */
+  background-image: linear-gradient(90deg, var(--primary-color), var(--dm-accent-color));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: all 0.5s ease;
+  padding-bottom: 5px;
+}
+
+a:hover {
+  color: var(--dm-accent-color);
+  background-size: 100% 2px;
 }
 
 code {
@@ -61,6 +77,10 @@ header {
 .logo-container {
   display: flex;
   margin: auto 20px;
+}
+
+.logo-name {
+  font-size: 40px;
 }
 
 .nav-container {
@@ -96,17 +116,22 @@ header {
   text-decoration: none;
 }
 
+.nav-item a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
 
 /* Toggle Switch Start */
 .toggle-input {
   position: absolute;
-  top: 25px;
+  top: 30px;
   right: 5%;
 }
 
 .toggle-label {
   position: absolute;
-  top: 25px;
+  top: 30px;
   right: 5%;
 }
 
@@ -123,8 +148,8 @@ header {
   background-size: contain;
   border-radius: 50%;
   box-shadow: 0 0 3px black;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   background-color: #1f2833;   
   transform: rotate(0deg);
   transition: all 2s;
@@ -139,8 +164,8 @@ header {
   background-size: contain;
   border-radius: 50%;
   box-shadow: 0 0 3px black;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   background-color: #EDEDF6;   
   transform: rotate(90deg);
   transition: all 2s;
@@ -152,9 +177,83 @@ header {
   cursor: pointer;
 }
 
+/* General Style */
+.title {
+  font-size: 50px;
+  font-weight: 800; 
+  margin: 20px auto;
+}
+
+.description {
+  font-size: 25px;
+}
+
+/* About section */
+.about-section {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.about-section img {
+  max-width: 350px;
+  max-height: 350px;
+  border-radius: 50%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  animation-duration: 1.5s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes changewidth {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* contact-icons */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-icons a {
+  display: flex;
+  min-width: 80px;
+  flex-direction: column;
+}
+
+.contact-icons a i {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-icons a {
+  margin: 5px;
+}
+
+.contact-icons a span {
+  text-align: center;
+}
+
+.contact-icons a span:hover {
+  background-size: 100% 2px;
+}
 
 /* Responsive CSS width under 880px */
 @media only screen and (max-width: 880px) {
+  .about-section img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
   header {
     flex-wrap: wrap;
   }
@@ -177,6 +276,11 @@ header {
 
 /* Responsive Style width below 540px */
 @media only screen and (max-width: 690px) {
+
+  .about-section img {
+    max-width: 250px;
+    max-height: 250px;
+  }
 
   .mobile-nav-icon {
     display: block;
