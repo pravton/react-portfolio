@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Nav({currentTheme, setTheme, setCurrentTheme }) {
+function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink }) {
   const mobileMenuToggle = () => {
     const navContainer = document.querySelector('.nav-container');
     const navIcon = document.querySelector('#mobile-nav-icon');
@@ -28,16 +28,28 @@ function Nav({currentTheme, setTheme, setCurrentTheme }) {
       <nav className="nav-container nav-hide">
         <ul className="nav">
           <li className="nav-item">
-            <a href="#about">About Me</a>
+            <span onClick={() => {
+              setCurrentLink('About Me');
+              mobileMenuToggle();
+            }}>About Me</span>
           </li>
           <li className="nav-item">
-            <a href="#work">Work</a>
+            <span onClick={() => {
+              setCurrentLink('Work');
+              mobileMenuToggle();
+            }}>Work</span>
           </li>
           <li className="nav-item">
-            <a href="#contact">Contact</a>
+            <span onClick={() => {
+              setCurrentLink('Contact');
+              mobileMenuToggle();
+            }}>Contact</span>
           </li>
           <li className="nav-item">
-            <a href="#resume">Resume</a>
+          <span onClick={() => {
+            setCurrentLink('Resume');
+            mobileMenuToggle();
+          }}>Resume</span>
           </li>
         </ul>
       </nav>
