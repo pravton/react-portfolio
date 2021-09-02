@@ -61,13 +61,24 @@ function Work() {
       github: 'https://github.com/pravton/taskinator'
     },
     {
-      projectLink: 'https://pravton.github.io/team-profile-generator/',
-      title: 'Team Profile Generator CLI',
-      description: 'HTML, CSS, Javascript & Node',
-      bgImage: require(`../../images/projects/team-profile.jpg`).default,
-      github: 'https://github.com/pravton/team-profile-generator'
+      projectLink: 'http://just-tech-blog.herokuapp.com/',
+      title: 'Taskinator',
+      description: 'HTML, CSS, Javascript, Node, Express, MySQL & Sequelize',
+      bgImage: require(`../../images/projects/tech-blog.jpg`).default,
+      github: 'https://github.com/pravton/tech-blog'
     },
+    // {
+    //   projectLink: 'https://pravton.github.io/team-profile-generator/',
+    //   title: 'Team Profile Generator CLI',
+    //   description: 'HTML, CSS, Javascript & Node',
+    //   bgImage: require(`../../images/projects/team-profile.jpg`).default,
+    //   github: 'https://github.com/pravton/team-profile-generator'
+    // },
   ]
+
+  function linkClick (link) {
+    window.open(link, '_blank');
+  }
 
   return (
     <section id="works" className="">
@@ -80,8 +91,8 @@ function Work() {
                   <h3>{work.title}</h3>
                   <p>{work.description}</p>
                   <div className="work-info-icons">
-                    <a href={work.github} target="_blank" rel="noreferrer" className="wii-link"><i className="fab fa-github"></i></a>
-                    <a href={work.projectLink} target="_blank" rel="noreferrer" className="wii-link"><i className="fas fa-globe"></i></a>
+                    <span onClick={() => linkClick(work.github)} className="wii-link"><i className="fab fa-github"></i></span>
+                    <span onClick={() => linkClick(work.projectLink)} className="wii-link"><i className="fas fa-globe"></i></span>
                 </div>
               </div>
           </a>

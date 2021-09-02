@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { CSSTransitionGroup } from 'react-transition-group'
 import logo from './logo.svg';
 import './App.css';
 import { setTheme, switchTheme } from './utils/theme';
@@ -16,8 +15,7 @@ function App() {
   setTheme(currentTheme);
   // set the current link
   const [ currentLink, setCurrentLink ] = useState('About Me');
-  console.log(currentLink);
-  
+  const nodeRef = React.createRef(null);
   return (
     <div className={`App ${currentTheme}`}>
       <Nav 
@@ -25,14 +23,9 @@ function App() {
         setTheme={switchTheme}
         setCurrentTheme={setCurrentTheme}
         setCurrentLink={setCurrentLink}/>
-      <CSSTransitionGroup
-        transitionName="compAnimation"
-        transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-          {currentLink === 'About Me' && <About />}
-          {currentLink === 'Work' && <Work />}
-          {currentLink === 'Contact' && <Contact />}
-      </CSSTransitionGroup>
+        {currentLink === 'About Me' && <About key="1" />}
+        {currentLink === 'Work' && <Work key="2" />}
+        {currentLink === 'Contact' && <Contact key="3"/>}
     </div>
   );
 }

@@ -397,8 +397,14 @@ header {
   margin-right: 10px;
 }
 
-.work-info-icons a:hover {
+.work-info-icons span {
+  color: white;
+  transition: all 500ms ease-in-out;
+}
+
+.work-info-icons span:hover {
   background: none;
+  color: var(--dm-accent-color);
 }
 
 .work-container {
