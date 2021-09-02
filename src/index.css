@@ -12,6 +12,7 @@ html {
   --background-color: #F7F6F2;
   --font-color: #4B6587;
   --dm-accent-color: #CF455C;
+  --off-white: #ffffff;
   --box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 
@@ -20,6 +21,7 @@ html {
   --background-color: #1c1f26;
   --font-color: #D7D8DA;
   --dm-accent-color: #CF455C;
+  --off-white: #F7F6F2;
   --box-shadow: rgb(121, 121, 121) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;
 }
 
@@ -47,7 +49,7 @@ p {
   font-size: 20px;
 }
 
-span {
+span, label, input, button {
   font-family: var(--secondary-font);
 }
 
@@ -203,6 +205,24 @@ header {
 
 .description {
   font-size: 25px;
+}
+
+.compAnimation-enter {
+  opacity: 0.01;
+}
+
+.compAnimation-enter.compAnimation-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.compAnimation-leave {
+  opacity: 1;
+}
+
+.compAnimation-leave.compAnimation-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
 
 /* About section */
@@ -421,6 +441,74 @@ header {
 
 .work-info a:hover {
   color: var(--dm-accent-color)
+}
+
+/* Contact Section */
+.contact-form {
+  width: 50%;
+  margin: 20px auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-container label {
+  margin: 10px 0;
+  text-align: left;
+  font-size: 25px;
+}
+
+.form-input-container input {
+  height: 30px;
+  padding: 5px 10px;
+  background-color: var(--off-white);
+  border-radius: 5px;
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
+.form-input-container input:focus-visible {
+  outline: none;
+  border: var(--dm-accent-color) 1px solid;
+}
+
+.form-input-container textarea {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--off-white);
+  box-shadow: var(--box-shadow);
+}
+
+.form-input-container textarea:focus-visible {
+  outline: none;
+  border: var(--dm-accent-color) 1px solid;
+}
+
+.button-container {
+  display: flex;
+}
+
+.contact-form button {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 120px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  background: var(--primary-color);
+  transition: all 300ms ease-out;
+}
+
+.contact-form button:hover {
+  background: var(--dm-accent-color);
 }
 
 @media only screen and (max-width: 1100px) {

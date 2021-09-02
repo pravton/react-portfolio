@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
+import { CSSTransitionGroup } from 'react-transition-group'
 import logo from './logo.svg';
 import './App.css';
 import { setTheme, switchTheme } from './utils/theme';
 import About from './components/About';
 import Work from './components/Work';
+import Contact from './components/Contact';
 
 // components
 import Nav from './components/Nav';
@@ -23,8 +25,14 @@ function App() {
         setTheme={switchTheme}
         setCurrentTheme={setCurrentTheme}
         setCurrentLink={setCurrentLink}/>
-      {currentLink === 'About Me' && <About />}
-      {currentLink === 'Work' && <Work />}
+      <CSSTransitionGroup
+        transitionName="compAnimation"
+        transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+          {currentLink === 'About Me' && <About />}
+          {currentLink === 'Work' && <Work />}
+          {currentLink === 'Contact' && <Contact />}
+      </CSSTransitionGroup>
     </div>
   );
 }
