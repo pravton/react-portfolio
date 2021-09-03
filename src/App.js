@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { setTheme, switchTheme } from './utils/theme';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 // components
 import Nav from './components/Nav';
@@ -23,10 +23,11 @@ function App() {
         setTheme={switchTheme}
         setCurrentTheme={setCurrentTheme}
         setCurrentLink={setCurrentLink}/>
-        {currentLink === 'About Me' && <About key="1" />}
-        {currentLink === 'Work' && <Work key="2" />}
-        {currentLink === 'Contact' && <Contact key="3"/>}
-        {currentLink === 'Resume' && <Resume key="4"/>}
+        {currentLink === 'About Me' && <About key="about" />}
+        {currentLink === 'Work' && <Work key="work" />}
+        {currentLink === 'Contact' && <Contact key="contact"/>}
+        {currentLink === 'Resume' && <Resume key="resume"/>}
+      <Footer/>
     </div>
   );
 }

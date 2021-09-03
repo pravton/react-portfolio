@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContactIcons from '../ContactIcons';
 
 function Contact() {
+  // form validation
+  const formData = {
+    name: "",
+    email: "",
+    message: ""
+  }
+
+  const [ formDetails, setFormDetails ] = useState(formData)
+
   return (
     <section className="contact-section">
       <h2 className="title-2">Let's Connect.</h2>

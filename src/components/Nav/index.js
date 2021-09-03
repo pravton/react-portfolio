@@ -18,7 +18,7 @@ function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink }) {
   return (
     <header className="header">
       <div className="logo-container">
-        <h1 className="logo-name">Clinton.</h1>
+        <a href="/"><h1 className="logo-name">Clinton.</h1></a>
       </div>
       <div className="theme-switch-container">
           <input onClick={() => setTheme(currentTheme, setCurrentTheme)} type="checkbox" id="toggle-switch" name="toggle-switch" className="toggle-input" />

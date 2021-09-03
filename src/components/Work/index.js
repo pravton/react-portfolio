@@ -62,7 +62,7 @@ function Work() {
     },
     {
       projectLink: 'http://just-tech-blog.herokuapp.com/',
-      title: 'Taskinator',
+      title: 'Tech Blog',
       description: 'HTML, CSS, Javascript, Node, Express, MySQL & Sequelize',
       bgImage: require(`../../images/projects/tech-blog.jpg`).default,
       github: 'https://github.com/pravton/tech-blog'
@@ -81,7 +81,7 @@ function Work() {
   }
 
   return (
-    <section id="works" className="">
+    <section id="works">
     <h1 className="title-2">Recent Projects.</h1>  
     <div className="works">
       {works.map((work, i) => (
