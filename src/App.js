@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import './App.css';
 import { setTheme, switchTheme } from './utils/theme';
+
+// components
+import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
-
-// components
-import Nav from './components/Nav';
 
 function App() {
   const [ currentTheme, setCurrentTheme ] = useState(localStorage.getItem('currentTheme') || 'light-theme');
@@ -16,10 +16,10 @@ function App() {
   setTheme(currentTheme);
   // set the current link
   const [ currentLink, setCurrentLink ] = useState('About Me');
-  console.log('1',currentLink);
+
   return (
     <div className={`App`}>
-      <Nav 
+      <Header 
         currentTheme={currentTheme}
         setTheme={switchTheme}
         setCurrentTheme={setCurrentTheme}
