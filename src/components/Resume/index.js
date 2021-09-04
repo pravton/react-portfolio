@@ -24,8 +24,8 @@ function Resume() {
           <div className="work-history">
           <p>1 <span className="sp-ml1"></span><span className="sp-purple">{`const`}</span> <span className="sp-orange">{`educationDetails`}</span> <span className="sp-teal">{` = `}</span> <span className="sp-purple">{`[`}</span></p>
           <p>2 <span className="sp-purple sp-ml2">{`{`}</span></p>
-          <p>3 <span className="sp-ml3"> <span className="sp-red">{`field`}</span> : <span className="sp-green">{`"Coding Boot Camp"`}</span>,</span></p>
-          <p>4 <span className="sp-ml3"> <span className="sp-red">{`program`}</span> : <span className="sp-green">{`"Full-Stack Development"`}</span>,</span></p>
+          <p>3 <span className="sp-ml3"> <span className="sp-red">{`program`}</span> : <span className="sp-green">{`"Coding Boot Camp"`}</span>,</span></p>
+          <p>4 <span className="sp-ml3"> <span className="sp-red">{`field`}</span> : <span className="sp-green">{`"Full-Stack Development"`}</span>,</span></p>
           <p>5 <span className="sp-ml3"> <span className="sp-red">{`yearCompleted`}</span> : <span className="sp-orange">2021</span>,</span></p>
           <p>6 <span className="sp-ml3"> <span className="sp-red">{`school`}</span> : <span className="sp-green">{`"University of Toronto"`}</span>,</span></p>
           <p>7 <span className="sp-ml2"> <span className="sp-purple">{`}`}</span>,</span></p>
