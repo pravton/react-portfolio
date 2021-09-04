@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink }) {
+function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink, currentLink }) {
   const mobileMenuToggle = () => {
     const navContainer = document.querySelector('.nav-container');
     const navIcon = document.querySelector('#mobile-nav-icon');
@@ -15,10 +15,13 @@ function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink }) {
     }
   }
 
+  const navList = ['About Me', 'Work', 'Contact', 'Resume'];
+  console.log(currentLink);
+
   return (
     <header className="header">
       <div className="logo-container">
-        <a href="/"><h1 className="logo-name">Clinton.</h1></a>
+        <a href="/react-portfolio"><h1 className="logo-name">Clinton.</h1></a>
       </div>
       <div className="theme-switch-container">
           <input onClick={() => setTheme(currentTheme, setCurrentTheme)} type="checkbox" id="toggle-switch" name="toggle-switch" className="toggle-input" />
@@ -27,30 +30,17 @@ function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink }) {
       </div>
       <nav className="nav-container nav-hide">
         <ul className="nav">
-          <li className="nav-item">
-            <span onClick={() => {
-              setCurrentLink('About Me');
-              mobileMenuToggle();
-            }}>About Me</span>
-          </li>
-          <li className="nav-item">
-            <span onClick={() => {
-              setCurrentLink('Work');
-              mobileMenuToggle();
-            }}>Work</span>
-          </li>
-          <li className="nav-item">
-            <span onClick={() => {
-              setCurrentLink('Contact');
-              mobileMenuToggle();
-            }}>Contact</span>
-          </li>
-          <li className="nav-item">
-          <span onClick={() => {
-            setCurrentLink('Resume');
-            mobileMenuToggle();
-          }}>Resume</span>
-          </li>
+          {navList.map(nav => (
+            <li className="nav-item"
+              key={nav}>
+              <span
+              className={`${currentLink === nav && 'nav-active'}`}
+              onClick={() => {
+                setCurrentLink(nav);
+                mobileMenuToggle();
+              }}>{nav}</span>
+            </li>
+          ))}
         </ul>
       </nav>
       <div id="mobile-nav-icon" className="mobile-nav-icon">

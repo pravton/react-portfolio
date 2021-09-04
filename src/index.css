@@ -185,12 +185,17 @@ header {
   background-repeat: no-repeat;
   background-position: bottom;
   transition: all 0.5s ease;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 .nav-item span:hover {
   color: var(--dm-accent-color);
   background-size: 100% 2px;
+  border-radius: 15px;
+}
+
+.nav-active {
+  color: var(--dm-accent-color);
 }
 
 
@@ -344,8 +349,10 @@ header {
   text-align: center;
 }
 
-.contact-icons a span:hover {
-  background-size: 100% 2px;
+.contact-icons a:hover {
+  border-radius: 15px;
+  background-size: 85% 2px;
+  border-radius: 25%;
 }
 
 /* Work Section */
@@ -995,6 +1002,8 @@ button {
   /* contact icons section */
   .contact-icons a {
     min-width: 50px;
+    background-image: none;
+    background-size: 0;
   }
 
   .contact-icons a i {
