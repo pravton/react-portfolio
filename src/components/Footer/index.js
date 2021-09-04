@@ -9,7 +9,7 @@ function Footer() {
     <footer className="footer-section">
       <div className="footer-content">
         <h3><strong>Clinton.</strong></h3>
-        <p>Made with ❤️ using React!</p>
+        <p>Crafted with ❤️ by <strong><a href="https://github.com/pravton" target="_blank" rel="noreferrer">Pravton</a></strong></p>
         <p>© {year} All Rights Reserved</p> 
       </div>
     </footer>

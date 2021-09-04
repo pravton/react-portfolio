@@ -24,9 +24,12 @@ function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink, currentLi
         <a href="/react-portfolio"><h1 className="logo-name">Clinton.</h1></a>
       </div>
       <div className="theme-switch-container">
-          <input onClick={() => setTheme(currentTheme, setCurrentTheme)} type="checkbox" id="toggle-switch" name="toggle-switch" className="toggle-input" />
+          {/* <input onClick={} type="checkbox" id="toggle-switch" name="toggle-switch" className="toggle-input" />
           <label htmlFor="toggle-switch" className="toggle-label">
-          </label>
+          </label> */}
+          <div onClick={() => setTheme(currentTheme, setCurrentTheme)} className="icons-switch">
+            <i className={`fas ${currentTheme === 'light-theme' ? `fa-sun` : `fa-moon`}`}></i>
+          </div>
       </div>
       <nav className="nav-container nav-hide">
         <ul className="nav">
@@ -44,7 +47,8 @@ function Nav({currentTheme, setTheme, setCurrentTheme, setCurrentLink, currentLi
         </ul>
       </nav>
       <div id="mobile-nav-icon" className="mobile-nav-icon">
-        <div onClick={mobileMenuToggle} id="burgerBtn"></div>
+        <div onClick={mobileMenuToggle} id="burgerBtn">
+        </div>
       </div>
     </header>
   )

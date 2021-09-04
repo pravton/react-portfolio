@@ -13,13 +13,13 @@ html {
 }
 
 .light-theme {
-  --primary-color: #4B6587;
+  --primary-color: #394361;
   --background-color: #F7F6F2;
-  --font-color: #4B6587;
+  --font-color: #394361;
   --dm-accent-color: #CF455C;
   --off-white: #ffffff;
   --box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-  --button-color: #4B6587;
+  --button-color: #394361;
   --focus-box-shadow: rgba(37, 37, 37, 0.05) 0px 0px 0px 1px, rgb(248, 52, 101) 0px 0px 0px 1px inset;
   --code-bg: #fff;
 }
@@ -54,6 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
 }
 
 section {
@@ -105,7 +106,7 @@ span, label, input, button {
   font-family: var(--secondary-font);
 }
 
-a {
+a, .cust-links {
   font-family: var(--primary-font);
   color: var(--primary-color);
   text-decoration: none;
@@ -118,9 +119,15 @@ a {
   padding-bottom: 5px;
 }
 
-a:hover {
+a:hover, .cust-links:hover {
   color: var(--dm-accent-color);
   background-size: 100% 2px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.cust-links {
+  margin-top: 20px;
 }
 
 code {
@@ -198,61 +205,33 @@ header {
 }
 
 .nav-active {
-  color: var(--dm-accent-color);
+  color: var(--dm-accent-color) !important;
 }
 
-
-/* Toggle Switch Start */
-.toggle-input {
-  position: absolute;
-  top: 30px;
-  right: 5%;
-}
-
-.toggle-label {
-  position: absolute;
-  top: 30px;
-  right: 5%;
-}
-
-.toggle-input {
-  opacity: 0;
-}
-
-.toggle-input:checked + .toggle-label::before {
-  display: inline-block;
-  content: " ";
-  background-image: url(./images/moon.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+/* icon toggle */
+.icons-switch {
+  font-size: 32px;
+  box-shadow: var(--box-shadow);
+  padding: 5px;
   border-radius: 50%;
-  box-shadow: 0 0 3px black;
-  width: 45px;
-  height: 45px;
-  background-color: #1f2833;   
-  transform: rotate(0deg);
-  transition: all 2s;
-}
-
-.toggle-input + .toggle-label::before {
-  display: inline-block;
-  content: " ";
-  background-image: url(./images/sun.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 50%;
-  box-shadow: 0 0 3px black;
-  width: 45px;
-  height: 45px;
-  background-color: #EDEDF6;   
-  transform: rotate(90deg);
-  transition: all 2s;
-}
-
-.toggle-label:hover {
+  background: var(--background-color);
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 28px;
+  right: 3rem;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.fa-sun {
+  transform: rotate(90deg);
+  transition: transform 1.5s;
+}
+
+.fa-moon {
+  transform: rotate(-20deg);
+  transition: transform 1.5s;
 }
 
 /* General Style */
@@ -813,14 +792,9 @@ button {
     font-weight: 500;
   }
 
-  .toggle-input:checked + .toggle-label::before {
-    width: 32px;
-    height: 32px;
-  }
-
-  .toggle-input + .toggle-label::before {
-    width: 32px;
-    height: 32px;
+  /* toggle switch */
+  .icons-switch {
+    right: 2rem;
   }
 
   /* Heading Style */
@@ -828,14 +802,6 @@ button {
       text-align: center;
       margin: 30px auto;
   }
-
-  .toggle-input:checked + .toggle-label::before {
-      background-color: #1f2833;   
-  }
-
-  .toggle-input + .toggle-label::before {
-      background-color: #EDEDF6;   
-  } 
 
   .contact-form {
     width: 85%;
@@ -903,21 +869,22 @@ button {
   }
 
   /* Toggle Style */
-  .toggle-input {
-    right: 4rem;
-    top: 27px;
+
+  .icons-switch {
+    right: 4.5rem;
+    top: 25px;
+    width: 32px;
+    height: 32px;
+    font-size: 29px;
   }
 
-  .toggle-label {
-    right: 4rem;
-    top: 27px;
-  }
+
 
   #burgerBtn {
     display: block;
-    border-top: 3px solid var(--primary-color);
-    height: 25px;
-    width: 25px;
+    border-top: 4px solid var(--primary-color);
+    height: 30px;
+    width: 30px;
     box-sizing: border-box;
     position: absolute;
     z-index: 30;
@@ -933,11 +900,11 @@ button {
     content: "";
     display: block;
     position: absolute;
-    height: 3px;
-    width: 25px;
+    height: 4px;
+    width: 30px;
     left: 0;
     background: var(--primary-color);
-    top: 8px;
+    top: 9px;
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -khtml-transition: all 0.3s ease-in;
@@ -948,8 +915,8 @@ button {
     content: "";
     display: block;
     position: absolute;
-    height: 3px;
-    width: 25px;
+    height: 4px;
+    width: 30px;
     left: 0;
     background: var(--primary-color);
     bottom: 0;
@@ -969,8 +936,8 @@ button {
     -khtml-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    width: 33px;
-    left: -2px;
+    width: 35px;
+    left: 0px;
   }
   .nav-open #burgerBtn:after {
     -webkit-transform: rotate(135deg);
@@ -978,9 +945,9 @@ button {
     -khtml-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg);
-    bottom: 11px;
-    width: 33px;
-    left: -2px;
+    bottom: 13px;
+    width: 35px;
+    left: 0px;
   }
 
   /* general style */

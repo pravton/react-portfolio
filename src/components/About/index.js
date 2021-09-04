@@ -4,15 +4,15 @@ import aboutImg from '../../images/cover.jpg';
 
 
 
-function About() {
+function About({setCurrentLink}) {
   return (
     <section id="about" className="about-section">
     <img src={aboutImg} alt="" />
-    <h1 className="title">About Me!</h1>
+    <h1 className="title">About Me.</h1>
     <p className="description">
-    I am a full stack web developer currently taking a coding Boot Camp at University of Toronto. I help designers, small businesses and agencies to bring their ideas into reality. <br/>
-    I love coding and I have a great passion about building intuitive UI and dynamic user experience. <br/>
-    <span><a href="#contact"><strong>Any ideas on mind? <span className="sp-connect">Let's connect!</span></strong></a> 👋</span>
+    I am a full stack web developer currently taking a coding Boot Camp at University of Toronto. I work with designers, small businesses and agencies to bring their ideas into reality. <br/>
+    I love coding and I have a great passion about building intuitive UI and dynamic user experience. <br/><br/>
+    <span className="cust-links" onClick={() => setCurrentLink('Contact')}><strong>Any ideas on mind? <span className="sp-connect">Let's connect!</span></strong> 👋</span>
     </p>
     <ContactIcons />
     </section>

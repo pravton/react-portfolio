@@ -18,14 +18,14 @@ function App() {
   const [ currentLink, setCurrentLink ] = useState('About Me');
   console.log('1',currentLink);
   return (
-    <div className={`App ${currentTheme}`}>
+    <div className={`App`}>
       <Nav 
         currentTheme={currentTheme}
         setTheme={switchTheme}
         setCurrentTheme={setCurrentTheme}
         setCurrentLink={setCurrentLink}
         currentLink={currentLink}/>
-        {currentLink === 'About Me' && <About key="about" />}
+        {currentLink === 'About Me' && <About key="about" setCurrentLink={setCurrentLink}/>}
         {currentLink === 'Work' && <Work key="work" />}
         {currentLink === 'Contact' && <Contact key="contact"/>}
         {currentLink === 'Resume' && <Resume key="resume"/>}
