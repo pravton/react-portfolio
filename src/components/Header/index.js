@@ -6,7 +6,7 @@ function Header({currentTheme, setTheme, setCurrentTheme, setCurrentLink, curren
   return (
     <header className="header">
       <div className="logo-container">
-        <a href="/react-portfolio"><h1 className="logo-name">Clinton.</h1></a>
+        <a href="/"><h1 className="logo-name">Clinton.</h1></a>
       </div>
       <div className="theme-switch-container">
           <div onClick={() => setTheme(currentTheme, setCurrentTheme)} className="icons-switch">
