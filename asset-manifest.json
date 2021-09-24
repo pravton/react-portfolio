@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.df85d80e.chunk.css",
-    "main.js": "/static/js/main.07a337a4.chunk.js",
-    "main.js.map": "/static/js/main.07a337a4.chunk.js.map",
+    "main.js": "/static/js/main.7dc63ce2.chunk.js",
+    "main.js.map": "/static/js/main.7dc63ce2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.70088d30.js",
     "runtime-main.js.map": "/static/js/runtime-main.70088d30.js.map",
     "static/js/2.886c6e4c.chunk.js": "/static/js/2.886c6e4c.chunk.js",
@@ -13,6 +13,7 @@
     "static/css/main.df85d80e.chunk.css.map": "/static/css/main.df85d80e.chunk.css.map",
     "static/js/2.886c6e4c.chunk.js.LICENSE.txt": "/static/js/2.886c6e4c.chunk.js.LICENSE.txt",
     "static/media/Clinton-Sebastian-resume.4a63a107.pdf": "/static/media/Clinton-Sebastian-resume.4a63a107.pdf",
+    "static/media/booklyst.jpg": "/static/media/booklyst.daf7a6e9.jpg",
     "static/media/budget-tracker.jpg": "/static/media/budget-tracker.86d8b8f6.jpg",
     "static/media/cover.54b3732e.jpg": "/static/media/cover.54b3732e.jpg",
     "static/media/covidDashboard.jpg": "/static/media/covidDashboard.ed3975cc.jpg",
@@ -20,7 +21,6 @@
     "static/media/food-festival.jpg": "/static/media/food-festival.a9e3c261.jpg",
     "static/media/get-it-done.JPG": "/static/media/get-it-done.98156947.JPG",
     "static/media/taskinator.JPG": "/static/media/taskinator.7d4bf277.JPG",
-    "static/media/tech-blog.jpg": "/static/media/tech-blog.7ccd36a2.jpg",
     "static/media/weather-dashboard.jpg": "/static/media/weather-dashboard.f2c98314.jpg",
     "static/media/zoo-keeper.jpg": "/static/media/zoo-keeper.1bf20dac.jpg"
   },
@@ -28,6 +28,6 @@
     "static/js/runtime-main.70088d30.js",
     "static/js/2.886c6e4c.chunk.js",
     "static/css/main.df85d80e.chunk.css",
-    "static/js/main.07a337a4.chunk.js"
+    "static/js/main.7dc63ce2.chunk.js"
   ]
 }
