@@ -4,6 +4,13 @@ function Work() {
 
   const works = [
     {
+      projectLink: 'https://booklyst-project.herokuapp.com/',
+      title: 'Booklyst. A book search engine',
+      description: 'HTML, CSS, Javascript, Node, Express, GraphQL, Mongoose, Redux & Bootstrap',
+      bgImage: require(`../../images/projects/booklyst.jpg`).default,
+      github: 'https://github.com/group3uoft/final-project'
+    },
+    {
       projectLink: 'https://coworkers-group2.herokuapp.com/',
       title: 'Coworkers: Employee Management System',
       description: 'HTML, CSS, Javascript, Node, Express & MySQL',
@@ -59,13 +66,13 @@ function Work() {
       bgImage: require(`../../images/projects/taskinator.JPG`).default,
       github: 'https://github.com/pravton/taskinator'
     },
-    {
-      projectLink: 'http://just-tech-blog.herokuapp.com/',
-      title: 'Tech Blog',
-      description: 'HTML, CSS, Javascript, Node, Express, MySQL & Sequelize',
-      bgImage: require(`../../images/projects/tech-blog.jpg`).default,
-      github: 'https://github.com/pravton/tech-blog'
-    },
+    // {
+    //   projectLink: 'http://just-tech-blog.herokuapp.com/',
+    //   title: 'Tech Blog',
+    //   description: 'HTML, CSS, Javascript, Node, Express, MySQL & Sequelize',
+    //   bgImage: require(`../../images/projects/tech-blog.jpg`).default,
+    //   github: 'https://github.com/pravton/tech-blog'
+    // },
     // {
     //   projectLink: 'https://pravton.github.io/team-profile-generator/',
     //   title: 'Team Profile Generator CLI',
