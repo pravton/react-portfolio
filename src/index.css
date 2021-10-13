@@ -256,8 +256,12 @@ header {
 }
 
 .description {
-  font-size: 25px;
+  font-size: 20px;
   margin: 30px auto;
+}
+
+.description span {
+  line-height: 2rem;
 }
 
 .compAnimation-enter {
@@ -697,6 +701,14 @@ button {
   background: var(--dm-accent-color);
   transform: scale(1.1);
   animation: scaleButton 0.5s ease-out;
+}
+
+.lang-container {
+  margin: 2rem;
+}
+
+.lang-container img {
+  margin: auto 0.2rem;
 }
 
 @keyframes scaleButton {

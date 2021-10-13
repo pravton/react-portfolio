@@ -1,5 +1,6 @@
 import React from 'react';
 import resumePDF from '../../images/Clinton-Sebastian-resume.pdf';
+import LanguageTools from '../LanguageTools';
 
 function Resume() {
   return (
@@ -33,6 +34,8 @@ function Resume() {
           </div>
         </div>
       </div>
+
+      <LanguageTools />
       <div className="resume-download">
         <h3 className="title-3">Download My Resume.</h3>
         <p>If you would like to know more, please download my resume!</p>
