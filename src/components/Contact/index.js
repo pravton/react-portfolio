@@ -16,7 +16,6 @@ function Contact() {
   const [ errorMessage, setErrorMessage ] = useState('');
 
   function handleChange(e) {
-    console.log(' Ridu test', e.target.value);
     if(e.target.name === 'email') {
       if(!e.target.value.length) {
         setErrorMessage(`${e.target.name} is required.`);
