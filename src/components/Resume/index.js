@@ -37,10 +37,10 @@ function Resume() {
           <p>6 <span className="sp-ml3"> <span className="sp-red">{`school`}</span> : <span className="sp-green">{`"University of Toronto"`}</span>,</span></p>
           <p>7 <span className="sp-ml2"> <span className="sp-purple">{`}`}</span>,</span></p>
           <p>8 <span className="sp-purple sp-ml2">{`{`}</span></p>
-          <p>9 <span className="sp-ml3"> <span className="sp-red">{`program`}</span> : <span className="sp-green">{`"HTML/CSS/SQL"`}</span>,</span></p>
-          <p>10 <span className="sp-ml4"> <span className="sp-red">{`field`}</span> : <span className="sp-green">{`"Web Development"`}</span>,</span></p>
-          <p>11 <span className="sp-ml4"> <span className="sp-red">{`yearCompleted`}</span> : <span className="sp-orange">2018</span>,</span></p>
-          <p>12 <span className="sp-ml4"> <span className="sp-red">{`school`}</span> : <span className="sp-green">{`"SoloLearn"`}</span>,</span></p>
+          <p>9 <span className="sp-ml3"> <span className="sp-red">{`program`}</span> : <span className="sp-green">{`"Vue, React, Python & TypeScript"`}</span>,</span></p>
+          <p>10 <span className="sp-ml4"> <span className="sp-red">{`field`}</span> : <span className="sp-green">{`"Latest Stacks & Languages"`}</span>,</span></p>
+          <p>11 <span className="sp-ml4"> <span className="sp-red">{`yearCompleted`}</span> : <span className="sp-orange">2021</span>,</span></p>
+          <p>12 <span className="sp-ml4"> <span className="sp-red">{`school`}</span> : <span className="sp-green">{`"LinkedIn Learning"`}</span>,</span></p>
           <p>13 <span className="sp-ml2"> <span className="sp-purple">{`}`}</span>,</span></p>
           <p>14 <span className="sp-purple sp-ml1">{`]`}</span></p>
           </div>
